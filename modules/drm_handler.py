@@ -128,7 +128,7 @@ async def drm_handler(bot: Client, m: Message):
     if m.document:
         editable = await m.reply_text(f"**Total 🔗 links found are {len(links)}\n<blockquote>•PDF : {pdf_count}      •V2 : {v2_count}\n•Img : {img_count}      •YT : {yt_count}\n•zip : {zip_count}       •m3u8 : {m3u8_count}\n•drm : {drm_count}      •Other : {other_count}\n•mpd : {mpd_count}</blockquote>\nSend From where you want to download**")
         try:
-            input0: Message = await bot.listen(editable.chat.id, timeout=20)
+            input0: Message = await bot.listen(editable.chat.id, timeout=60)
             raw_text = input0.text
             await input0.delete(True)
         except asyncio.TimeoutError:
@@ -142,7 +142,7 @@ async def drm_handler(bot: Client, m: Message):
 
         await editable.edit(f"**Enter Batch Name or send /d**")
         try:
-            input1: Message = await bot.listen(editable.chat.id, timeout=20)
+            input1: Message = await bot.listen(editable.chat.id, timeout=60)
             raw_text0 = input1.text
             await input1.delete(True)
         except asyncio.TimeoutError:
@@ -155,7 +155,7 @@ async def drm_handler(bot: Client, m: Message):
 
         await editable.edit("__**⚠️Provide the Channel ID or send /d__\n\n<blockquote><i>🔹 Make me an admin to upload.\n🔸Send /id in your channel to get the Channel ID.\n\nExample: Channel ID = -100XXXXXXXXXXX</i></blockquote>\n**")
         try:
-            input7: Message = await bot.listen(editable.chat.id, timeout=20)
+            input7: Message = await bot.listen(editable.chat.id, timeout=60)
             raw_text7 = input7.text
             await input7.delete(True)
         except asyncio.TimeoutError:
