@@ -261,6 +261,10 @@ async def drm_handler(bot: Client, m: Message):
                 else:
                     name = f'{str(count).zfill(3)}) {name1[:60]} {endfilename}'
                     namef = f'{name1[:60]} {endfilename}'
+
+            if "utkarshapp" in url:
+               marshmallow_url = f'https://player.marshmallowapi.workers.dev/?video={url}'
+               cmd = f'yt-dlp -o "{name}.mp4" "{marshmallow_url}"'
                 
             if "visionias" in url:
                 async with ClientSession() as session:
