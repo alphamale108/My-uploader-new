@@ -373,7 +373,7 @@ async def drm_handler(bot: Client, m: Message):
            
           # if "jw-prod" in url:
            #     cmd = f'yt-dlp -o "{name}.mp4" "{url}"'
-            if "jw-prod" in url:
+            if "utkarshapp" in url:
                marshmallow_url = f'https://player.marshmallowapi.workers.dev/?video={url}'
                cmd = f'yt-dlp -o "{name}.mp4" "{marshmallow_url}"'
             elif "webvideos.classplusapp." in url:
